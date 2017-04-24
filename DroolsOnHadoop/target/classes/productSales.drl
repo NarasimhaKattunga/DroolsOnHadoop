@@ -1,0 +1,16 @@
+package drivingAction.rules
+
+import DomainObjects.*
+import Enumerations.*
+import JavaEnumerations.*
+import JavaDomainObjects.*
+
+
+
+rule "Country USA"
+when
+    $prod : Products(retCountry == "United States" , quarter=="Q1 2012" , revenue > 4000.00)
+  then
+    $prod.isValid(true);
+    //System.out.println("Condition is valid");
+end

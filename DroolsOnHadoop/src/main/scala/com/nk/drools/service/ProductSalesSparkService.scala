@@ -24,7 +24,7 @@ object ProductSalesSparkService {
     //Creating dataframe
     val prodDF = sparkSqlCtx.createDataFrame( productRDD )
         //saving to avro
-    prodDF.write.mode("overwrite").avro("C:\\Narasimha\\Telia\\io\\drools")
+    prodDF.write.mode("overwrite").avro("C:\\Narasimha\\io\\drools")
     prodDF.show()
     sparkCtx.stop()
   }
